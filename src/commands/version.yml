@@ -1,8 +1,6 @@
 description: |+
   Run 'ct version'
-parameters: {}
 steps:
   - run:
       description: Run 'ct version'
-      command: |+
-        ct version
+      command: ct version
