@@ -46,7 +46,7 @@ workflows:
           attach-workspace: true
           orb-path: workspace/orb.yml
           validate: false
-          orb-ref: << pipeline.parameters.workspace >>/loft@<< pipeline.parameters.orb-version >>
+          orb-ref: << pipeline.parameters.workspace >>/chart-testing@<< pipeline.parameters.orb-version >>
           requires:
             - orb-tools/pack
           context: orb-publishing
