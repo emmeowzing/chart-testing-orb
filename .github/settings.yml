@@ -29,37 +29,12 @@ labels:
     color: '#336699'
     description: New functionality.
 
-#collaborators:
-#    - username: blairham
-#      permission: admin
-#    - username: jstenquist
-#      permission: admin
-#
-#  # Note: `permission` is only valid on organization-owned repositories.
-#  # The permission to grant the collaborator. Can be one of:
-#  # * `pull` - can pull, but not push to or administer this repository.
-#  # * `push` - can pull and push, but not administer this repository.
-#  # * `admin` - can pull, push and administer this repository.
-#  # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
-#  # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
-#
-# See https://docs.github.com/en/rest/reference/teams#add-or-update-team-repository-permissions for available options
-#teams:
-#  - name: devops
-#    # The permission to grant the team. Can be one of:
-#    # * `pull` - can pull, but not push to or administer this repository.
-#    # * `push` - can pull and push, but not administer this repository.
-#    # * `admin` - can pull, push and administer this repository.
-#    # * `maintain` - Recommended for project managers who need to manage the repository without access to sensitive or destructive actions.
-#    # * `triage` - Recommended for contributors who need to proactively manage issues and pull requests without write access.
-#    permission: push
-
 branches:
   - name: master
     protection:
       required_pull_request_reviews:
         # The number of approvals required. (1-6)
-        required_approving_review_count: 2
+        required_approving_review_count: 1
         # Dismiss approved reviews automatically when a new commit is pushed.
         dismiss_stale_reviews: true
         # Blocks merge until code owners have reviewed.
