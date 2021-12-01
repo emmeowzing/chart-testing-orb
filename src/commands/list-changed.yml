@@ -1,0 +1,15 @@
+description: |+
+  Run 'ct list-changed'
+parameters:
+  config:
+    description: Path to a valid configuration file.
+    type: string
+  extra-args:
+    description: Additional arguments to pass to ct
+    type: string
+    default: ''
+steps:
+  - run:
+      description: Run 'ct list-changed'
+      command: |+
+        ct list-changed --config << parameters.config >> << parameters.extra-args >>

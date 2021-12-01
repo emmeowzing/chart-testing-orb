@@ -1,0 +1,15 @@
+description: |+
+  Run 'ct lint-and-install'
+parameters:
+  config:
+    description: Path to a valid configuration file.
+    type: string
+  extra-args:
+    description: Additional arguments to pass to ct
+    type: string
+    default: ''
+steps:
+  - run:
+      description: Run 'ct lint-and-install'
+      command: |+
+        ct lint-and-install --config << parameters.config >> << parameters.extra-args >>

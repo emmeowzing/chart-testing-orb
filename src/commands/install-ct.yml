@@ -1,0 +1,30 @@
+description: |+
+  Install chart-testing (ct) and all prerequisites.
+parameters:
+  # https://github.com/helm/chart-testing/releases
+  version:
+    type: string
+    default: 2.5.0
+  kubectl-version:
+    type: string
+    default: latest
+  helm-client-version:
+    type: string
+    default: 3.7.1
+steps:
+  # Install prerequisites
+  - kubernetes/install-kubectl:
+      kubectl-version: << parameters.kubectl-version >>
+  - helm/install-helm-client:
+      version: << parameters.helm-client-version >>
+  - run:
+      description: Install YAMLlint and Yamale
+      command: |+
+        sudo apt update && sudo apt install -y python3-pip
+        pip install yamllint yamale
+  - run:
+      description: Install chart-testing (ct)
+      command: |+
+        wget https://github.com/helm/chart-testing/releases/download/v<< parameters.version >>/chart-testing_<< parameters.version >>_linux_amd64.tar.gz -O chart-testing.tar.gz
+        tar -zxvf chart-testing.tar.gz
+        sudo install -m 755 ct /usr/local/bin/ct

@@ -6,3 +6,7 @@ description: |+
 display:
   home_url: https://github.com/bjd2385/chart-testing-orb
   source_url: https://github.com/bjd2385/chart-testing-orb
+
+orbs:
+  helm: circleci/helm@1.2.0
+  kubernetes: circleci/kubernetes@0.12.1
