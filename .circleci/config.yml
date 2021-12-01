@@ -49,6 +49,7 @@ workflows:
           orb-ref: << pipeline.parameters.workspace >>/loft@<< pipeline.parameters.orb-version >>
           requires:
             - orb-tools/pack
+          context: orb-publishing
           filters:
             branches:
               only:
