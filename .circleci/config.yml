@@ -44,7 +44,7 @@ workflows:
                 - master
       - orb-tools/publish:
           attach-workspace: true
-          orb-path: orb.yml
+          orb-path: workspace/orb.yml
           validate: false
           orb-ref: << pipeline.parameters.workspace >>/loft@<< pipeline.parameters.orb-version >>
           requires:
