@@ -7,12 +7,10 @@ parameters:
 
   orb-version:
     type: string
-    default: 1.1.1
+    default: 1.2.1
 
 orbs:
-  #loft: << pipeline.parameters.workspace >>/loft@<< pipeline.parameters.orb-version >>
   orb-tools: circleci/orb-tools@10.1.0
-  bats: circleci/bats@1.0
   shellcheck: circleci/shellcheck@2.0
 
 workflows:
