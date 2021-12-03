@@ -4,6 +4,7 @@ parameters:
   config:
     description: Path to a valid configuration file.
     type: string
+    default: .chart-testing.yaml
   extra-args:
     description: Additional arguments to pass to ct
     type: string
