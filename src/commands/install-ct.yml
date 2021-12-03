@@ -10,7 +10,7 @@ parameters:
     default: latest
   helm-client-version:
     type: string
-    default: 3.7.1
+    default: v3.7.1
 steps:
   # Install prerequisites
   - kubernetes/install-kubectl:
