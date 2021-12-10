@@ -1,9 +1,10 @@
 Helm `chart-testing` orb for CircleCI
 -------------------------------------
 
-This orb provides a set of commands and jobs for [`chart-testing`](https://github.com/helm/chart-testing) in CircleCI workflows. Commands include 
+This orb provides a set of commands and jobs for [`chart-testing`](https://github.com/helm/chart-testing) in CircleCI workflows. Commands include
 
-### Usage
+- `install-ct`, to install one of the latest versions of `ct`, as well as expected CLI options
+- `ct [ install | lint-and-install | lint | list-changed | version ]`.
 
 ### Development
 
