@@ -1,0 +1,21 @@
+{
+  "name": "loft-orb",
+  "version": "1.0.0",
+  "description": "Loft orb for CircleCI pipelines",
+  "main": "index.js",
+  "scripts": {
+    "install:pre-commit-hooks": "pre-commit install --install-hooks --allow-missing-config -t pre-commit -t prepare-commit-msg",
+    "install:tools": "brew bundle install --no-lock --file Brewfile && yarn run install:pre-commit-hooks"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjd2385/loft-orb.git"
+  },
+  "keywords": [
+    "loft",
+    "kubernetes",
+    "circleci"
+  ],
+  "author": "Brandon Doyle",
+  "license": "BSD-3-Clause"
+}

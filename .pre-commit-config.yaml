@@ -5,18 +5,22 @@ repos:
       - id: trailing-whitespace
         args: [--markdown-linebreak-ext=md]
       - id: end-of-file-fixer
-      - id: check-yaml
-      - id: check-added-large-files
       - id: check-merge-conflict
 
-  - repo: https://github.com/jumanjihouse/pre-commit-hooks
-    rev: 2.1.5
+  - repo: https://github.com/syntaqx/git-hooks
+    rev: v0.0.16
     hooks:
-      - id: shellcheck
-        args:
-          - -x
+      - id: circleci-config-validate
 
-  - repo: https://github.com/zahorniak/pre-commit-circleci.git
-    rev: v0.2
+  - repo: https://github.com/bjd2385/circleci-orb-pre-commit-hook
+    rev: v1.0.1
     hooks:
-      - id: circleci_validate
+      - id: circleci-orb-validate
+        args:
+          - src
+
+  - repo: https://github.com/hqoapp/pre-commit-hooks
+    rev: v1.0.0
+    hooks:
+      - id: add-msg-issue-prefix
+        stages: [prepare-commit-msg]
